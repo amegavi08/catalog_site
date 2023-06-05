@@ -1,0 +1,691 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*My Own Codes*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+/********** Template CSS **********/
+
+
+
+body{
+/*
+    height: 100vh;
+    background-color: #000;
+    background-image: url(footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+*/
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orange;
+}
+
+/* Header */
+header{
+    position: fixed;
+    right: 6;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 75px;
+    padding: 0 2rem;
+    background: #000;
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.3);
+	transition: all 0.2s;
+}
+
+.navbar{
+    max-width: 1200px;
+/*    padding: 0 2rem;*/
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+
+.navbar .links {
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar .links a{
+    font-weight: 300;
+}
+
+.navbar .links a:hover{
+    /* letter-spacing: 0.1rem; */
+    color: rgb(254, 203, 36)
+}
+
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand:hover{
+    color: rgb(254, 203, 36)
+}
+
+
+.action-btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.95rem 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action-btn:hover{
+    background-color: white;
+    color: orange;
+    transition: all 300ms ease-in;
+    scale: 1.0;
+}
+
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: fixed;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(125, 124, 122);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* SECTION */
+/*Banner and banner info*/
+.banner{
+    background-attachment:fixed;
+    background-image: url(../images/Digistore-background-1.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: #645862;
+    transition: all 300ms ease-in;
+    margin: 0 auto;
+    padding: 0 0 80px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-overlay {
+	padding: 280px 0 220px;
+	background-color: rgba(15, 5, 20, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-text h2{
+    font-size: 45px;
+    font-weight: none;
+    color: whitesmoke;
+}
+
+.banner-text p{
+    font-size: 18px;  
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.banner-text span{
+    color: rgb(254, 203, 36)
+}
+
+.banner-button {
+	border: rgba(204, 204, 204, 0.18) 1px solid;
+	padding: 12px 35px;
+    color: orange;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 25px 25px 25px 25px;
+	font-size: 16px;
+	margin-top: 25px;
+}
+
+.banner-button:hover {
+	background-color: orange;
+	text-decoration: none;
+	color: #fff;
+}
+
+/* Intro Space */
+.intro_space {
+/*
+    margin: 45px auto;
+    padding: 0;
+    width: 100%;
+*/
+    margin: 0 auto;
+    padding: 5px 0 10px;
+    line-height: 10px;
+    font-size: 15px;
+    max-width: 85%;
+    font-style: italic;
+}
+
+.inner-intro{
+    padding: 0 30px;
+}
+
+.intro_space .outer-intro{
+    font-size: 2.0rem;
+    padding: auto 0;
+    margin: 0 auto;
+    font-weight: 500;
+    line-height: 0.9rem;
+    text-align: center;
+}
+
+.intro_space .inner-intro h1{
+    font-size: 2.1rem;
+    font-weight: 300;
+    border-left: 1.5px solid orange;
+    padding: 0 0 10px 10px;
+    margin: 0 0 15px 5px;
+}
+
+
+.intro_space .inner-intro p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 0 0 10px;
+    text-align:justify;
+    line-height: 1.8rem;
+}
+
+/* Right side */
+.image-container-1{
+    position: relative;
+    padding: 15px 0px 10px;
+    margin: 0 auto;
+    max-width: 85%;
+    border-radius: 10px 0px 10px 0px;
+    overflow: hidden;
+}
+
+.image-container-1 img{
+    margin: 0;
+    border-radius: 10px 0px 10px 0px;
+    transition: all 0.3s;
+}
+
+.image-container-1:hover img{
+    -o-transform: scale(1.21);
+    -moz-transform: scale(1.21);
+    -webkit-transform: scale(1.21);
+    transform: scale(1.21);
+}
+
+.tab-content p{
+    line-height: 1.6;
+}
+
+/************************/
+/*     12. Projects     */
+/************************/
+.filter {
+	padding-top: 6.5rem;
+	padding-bottom: 7rem;
+}
+
+.filter .section-title {
+	margin-bottom: 0.5rem;
+}
+
+.filter h2,
+.filter .section-title {
+	text-align: center;
+}
+
+.filter h2 {
+	margin-bottom: 3.25rem;
+}
+
+.filter .button-group {
+	text-align: center;
+}
+
+.filter .button-group a {
+	display: inline-block;
+	margin-right: 0.1875rem;
+	margin-bottom: 0.5rem;
+	margin-left: 0.1875rem;
+	padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
+	border-radius: 0.25rem;
+	background-color: #f1f4f7;
+	color: #7b7e85;
+	font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.filter .button-group a:hover {
+	background-color: #14bf98;
+	color: #fff;
+}
+
+.filter .button-group a.button.is-checked {
+	background-color: #14bf98;
+	color: #fff;
+}
+
+.filter .grid {
+	margin-top: 1.25rem;
+	border-radius: 0.375rem;
+}
+
+/* Hover Animation */
+.filter .element-item {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 50%;
+	background-color: #000; /* to hide 1px white margin in IE */
+}
+
+.filter .element-item img {
+	max-width: 100%;
+	margin: 0;
+	transition: all 0.3s;
+}
+
+.filter .element-item:hover img {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+/* end of hover animation */
+
+.filter .element-item .element-item-overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 1;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.filter .element-item .element-item-overlay span {
+	position: absolute;
+	z-index: 3;
+	top: 42%;
+	right: 0;
+	left: 0;
+	color: #fff;
+	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+}
+
+
+/**********************************/
+/*     13. Project Lightboxes     */
+/**********************************/
+.lightbox-basic {
+	position: relative;
+	max-width: 62.5rem;
+	margin: 2.5rem auto;
+	padding: 1.5625rem;
+	border-radius: 0.25rem;
+	background: #fff;
+	text-align: left;
+}
+
+.lightbox-basic img {
+	margin-right: auto;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	border-radius: 0.25rem;
+}
+
+.lightbox-basic .line-heading {
+	width: 3rem;
+	height: 1px;
+	margin-top: 0;
+	margin-bottom: 0.625rem;
+	margin-left: 0;
+	border: none;
+	background-color: #14bf98;
+}
+
+.lightbox-basic h6 {
+	margin-bottom: 2rem;
+}
+
+.lightbox-basic .testimonial-container {
+	margin-top: 1.75rem;
+	margin-bottom: 2.125rem;
+	padding: 1.125rem 1.5rem 1.125rem 1.5rem;
+	border-radius: 0.25rem;
+	background-color: #fbfbfb;
+}
+
+.lightbox-basic .testimonial-text {
+	margin-bottom: 0.5rem;
+}
+
+.lightbox-basic .testimonial-author {
+	margin-bottom: 0;
+}
+
+.lightbox-basic .btn-solid-reg,
+.lightbox-basic .btn-outline-reg {
+	margin-right: 0.375rem;
+	margin-bottom: 1rem;
+}
+
+.lightbox-basic a.mfp-close.as-button {
+	position: relative;
+	width: auto;
+	height: auto;
+	margin-right: 0.5rem;
+	color: #484a46;
+	opacity: 1;
+}
+
+.lightbox-basic a.mfp-close.as-button:hover {
+	color: #f2f2f2;
+}
+
+.lightbox-basic button.mfp-close.x-button {
+	position: absolute;
+	top: -0.375rem;
+	right: -0.375rem;
+	width: 2.75rem;
+	height: 2.75rem;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width:698px) {
+    .navbar .links,
+    .navbar .action-btn{
+        display: none;
+        font-size: 1.1rem;
+    }
+    .navbar .navbar-brand{
+        font-size: 1.5rem;
+    }
+    
+    .navbar .navbar-brand img{
+        width: 48;
+        height: 42;
+    }
+    
+    .navbar .toggle_btn{
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+    
+.intro_space {
+    margin: 0 auto;
+    padding: 0;
+    line-height: 10px;
+    font-size: 8px;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+}
+
+.inner-intro{
+    padding: 0 30px;
+}
+
+.intro_space .outer-intro{
+    font-size: 1.9rem;
+    padding: auto 0;
+    font-weight: bold;
+    line-height: 0.9rem;
+    text-align: center;
+}
+
+.intro_space .inner-intro h1{
+    font-size: 1.3rem;
+    border-left: 1.5px solid orange;
+    padding: 0 0 10px 10px;
+    margin: 0 0 15px 5px;
+}
+
+
+.intro_space .inner-intro p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 0 0 10px;
+    line-height: 1.8rem;
+}  
+    
+        .banner-text h2{
+        font-size: 25px;
+    }
+    
+    .banner-text p{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    	/* Projects */
+	.filter .element-item {
+		width: 25%;
+	}
+
+	.filter .element-item .element-item-overlay {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.filter .element-item:hover .element-item-overlay {
+		opacity: 1;
+	}
+}
+
+@media (min-width: 992px){
+    
+	/* Project Lightboxes */
+	.lightbox-basic img {
+		margin-bottom: 0;
+	}
+
+	.lightbox-basic h3 {
+		margin-top: 0.375rem;
+	}
+
+	.lightbox-basic .btn-solid-reg,
+	.lightbox-basic .btn-outline-reg {
+		margin-bottom: 0;
+	}
+	/* end of project lightboxes */
+
+}
+
+@media (min-width: 1200x){
+    	/* Projects */
+	.filter .element-item {
+		width: 17.3125rem; /* to eliminate grid overflow problem on hard refresh */
+		height: 16.875rem;
+	}
+
+	.filter .element-item .element-item-overlay span {
+		top: 45%;
+	}
+	/* end of projects */
+}
