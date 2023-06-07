@@ -125,6 +125,7 @@ body{
     background-position: center;
 */
     scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
 }
 
 li{
@@ -322,6 +323,11 @@ header{
 }
 
 /* Intro Space */
+
+.about{
+    font-weight: 100;
+}
+
 .intro_space {
 /*
     margin: 45px auto;
@@ -433,12 +439,12 @@ header{
 }
 
 .filter .button-group a:hover {
-	background-color: #14bf98;
+	background-color: rgb(254, 203, 36);
 	color: #fff;
 }
 
 .filter .button-group a.button.is-checked {
-	background-color: #14bf98;
+	background-color: rgb(254, 203, 36);
 	color: #fff;
 }
 
@@ -569,6 +575,12 @@ header{
 	width: 2.75rem;
 	height: 2.75rem;
 }
+
+/* Contact Us */
+.contact {
+    background: rgb(229, 241, 251);
+}
+
 
 
 /* RESPONSIVE DESIGN */
